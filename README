@@ -1,0 +1,20 @@
+AeroParker Registration Form README
+===================================
+
+Author: Michal Jonak <michaljonak.1999@gmail.com>
+
+For my solution approach to this  problem I used two separate servlets, the 
+source code to both can be found in Java Resources/src/servlet/.
+
+As per the instructions this project was developed using: 
+ - Apache Tomcat/7.0.109
+ - Java JDK/1.8.3_333
+ - MySQL/5.6.51
+
+
+Within the root directory there is a compile_deploy.bat script 
+which (on Windows) will compile the java files and deploy the contents of 
+/WebContent to the webapps folder of the Tomcat installation
+pointed to by %CATALINA_HOME%. It will also conveniently start Tomcat and allow the webapp to be viewed at 
+
+localhost:8080/AeroParkerRegistrationForm/

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+
+    <display-name>AeroParker Registration Form</display-name>
+    <description>
+      This is my submission for the AeroParker Registration Form Coding Challenge.
+      You can contact me at michaljonak.1999@gmail.com
+    </description>
+
+
+	<context-param>
+    	<param-name>configfile</param-name>
+	    <param-value>/WEB-INF/config.properties</param-value>
+	</context-param>
+    
+
+    <servlet>
+      <servlet-name>FormServlet</servlet-name>
+      <description>
+        This servlet is the main component of this solution, 
+        containing dynamically created fields to accomodate all columns of the database
+      </description>
+      <servlet-class>servlet.FormServlet</servlet-class>
+    </servlet>
+	
+	<servlet>
+      <servlet-name>SubmissionServlet</servlet-name>
+      <description>
+        This servlet handles the server side validation and insertion of the form values into the database
+      </description>
+      <servlet-class>servlet.SubmissionServlet</servlet-class>
+    </servlet>
+
+	
+
+    <servlet-mapping>
+      <servlet-name>FormServlet</servlet-name>
+      <url-pattern>/form</url-pattern>
+    </servlet-mapping>
+
+	<servlet-mapping>
+      <servlet-name>SubmissionServlet</servlet-name>
+      <url-pattern>/success</url-pattern>
+    </servlet-mapping>
+	
+
+    <session-config>
+      <session-timeout>30</session-timeout>
+    </session-config>
+
+
+</web-app>
